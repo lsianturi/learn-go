@@ -19,4 +19,11 @@ func main() {
 	//append more than one at once
 	s = append(s, 1, 2, 3, 4, 5)
 	printSclice(s)
+
+	a := append(s, 1)
+	printSclice(a)
+
+	a[1] = 999
+	printSclice(a)
+	printSclice(s)
 }
