@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-func fibonacci(c, quit chan int) {
+// Fibonacci bla
+func Fibonacci(c, quit chan int) {
 	x, y := 0, 1
 	for {
 		select {
@@ -15,6 +16,7 @@ func fibonacci(c, quit chan int) {
 	}
 }
 
+// main bla
 func main() {
 	c := make(chan int)
 	quit := make(chan int)
@@ -23,7 +25,8 @@ func main() {
 		for i := 0; i < 20; i++ {
 			fmt.Println(<-c)
 		}
-		quit <- 0
+		quit <- 999
 	}()
-	fibonacci(c, quit)
+	Fibonacci(c, quit)
+	fmt.Println("done")
 }
